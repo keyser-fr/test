@@ -1,0 +1,47 @@
+#!/bin/bash
+
+PS1_ORIGIN="${PS1}"
+BASTION="bastadm.front.secu.multis.p.fti.net"
+ADMIN_INFRA=""
+
+# REC PRIV
+kong_rec_priv() {
+    endpoint=""
+    KONG_VERSION="$(curl ...)"
+    export PS1+='\e[30;48;5;82m rec-priv [${KONG_VERSION}] \e[0m '
+}
+
+# REC PUB
+kong_rec_pub() {
+    endpoint=""
+    KONG_VERSION="$(curl ...)"
+    export PS1+='\e[30;48;5;82m rec-pub \e[0m '
+}
+
+# INTEG PRIV
+kong_integ_priv() {
+    endpoint=""
+    KONG_VERSION="$(curl ...)"
+    export PS1+='\e[37;41;5;1m integ-priv \e[0m '
+}
+
+# INTEG PUB
+kong_integ_pub() {
+    endpoint=""
+    KONG_VERSION="$(curl ...)"
+    export PS1+='\e[37;41;5;1m integ-pub \e[0m '
+}
+
+# PROD PRIV
+kong_prod_priv() {
+    endpoint=""
+    KONG_VERSION="$(curl ...)"
+    export PS1+='\e[37;41;5;1m prod-priv \e[0m '
+}
+
+# PROD PUB
+kong_prod_pub() {
+    endpoint=""
+    KONG_VERSION="$(curl ...)"
+    export PS1+='\e[37;41;5;1m prod-pub \e[0m '
+}
